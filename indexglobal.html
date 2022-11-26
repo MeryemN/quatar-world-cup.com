@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/js/libs/swiper/swiper-bundle.min.js">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+        integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="hacker.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Cup Du Monde Qatar 2022</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <header>
+            <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+                <div class="container navbar-container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#">
+                            <img class="logo" src="./assets/img/World-Cup-logo-dark.png" alt="logo">
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#about">Groupes</a></li>
+                            <li><a href="#portfolio">Matchs</a></li>
+                            <li><a href="#contact">Classement</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-social">
+                        <ul id="top-social-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="icon icon--twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon icon--facebook"></i>
+                                </a>
+                            </li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    </div>
+
+    <section>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-img-1">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-img-2">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-img-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="swiper-pagination"></div>
+
+    <div>
+
+        <div id="volet4">
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Payé</th>
+                        <th>Né le</th>
+                        <th>Post</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="mytable">
+                    <tr id="Row">
+                        <td id="name2"> Y. Bounou</td>
+                        <td id="pay2"> Morocco</td>
+                        <td id="date2"> 05/04/91</td>
+
+                        <td>
+                            <div id="pos2">GAR</div>
+                        </td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button" id="DELETE"
+                                    onclick="deleteRow('Y. Bounou')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name3"> N. Aguerd</td>
+                        <td id="pay3">Morocco</td>
+                        <td id="date3">30/03/96</td>
+
+                        <td>
+                            <div id="pos3 ">DEF </div>
+                        </td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('N. Aguerd')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name4"> A. Hakimi</td>
+                        <td id="pay4">Morocco</td>
+                        <td id="date4">04/11/98</td>
+
+                        <td id="pos4">DEF</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('A. Hakimi')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name5">N. Mazraoui</td>
+                        <td id="pay5">Morocco</td>
+                        <td id="date5">14/11/97</td>
+
+                        <td id="pos5">
+                            DEF</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('N. Mazraoui')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name6"> R. Saiss</td>
+                        <td id="pay6">Morocco</td>
+                        <td id="date6">26/03/90</td>
+                        <td id="pos6">DIF</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('R. Saiss')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name7">S. Amallah</td>
+                        <td id="pay7">Morocco</td>
+                        <td id="date7">15/11/96</td>
+                        <td id="pos7">
+                            MIL</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('S. Amallah')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name8"> S. Amrabat</td>
+                        <td id="pay8">Morocco</td>
+                        <td id="date8">21/08/96</td>
+                        <td id="pos8">MIL
+                        </td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('S. Amrabat')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name9"> S. Boufal</td>
+                        <td id="pay9">Morocco</td>
+                        <td id="date9">17/09/93</td>
+                        <td id="pos9">MIL</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('S. Boufal')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name10"> A. Ounahi</td>
+                        <td id="pay10">Morocco</td>
+                        <td id="date10">19/04/00</td>
+                        <td id="pos10">
+                            MIL</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('A. Ounahi')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name11"> H. Ziyech</td>
+                        <td id="pay11">Morocco</td>
+                        <td id="date11">19/03/93</td>
+                        <td id="pos11">MIL</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" type="button" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('H. Ziyech')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="Row">
+                        <td id="name12">Y. En-Nesyri</td>
+                        <td id="pay12">Morocco</td>
+                        <td id="date12">01/06/97</td>
+                        <td id="pos12">ATT</td>
+                        <td>
+                            <div class="button-center">
+                                <button class="bn632-hover bn20" id="EDIT" type="button"
+                                    onclick="Editer()">Edit</button>
+                                <button class="bn632-hover bn20" type="button"
+                                    onclick="deleteRow('Y. En-Nesyri')">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> <br>
+            <button class="bn632-hover bn20" type="button" id="Addbutton" onclick="Ajouter()">Add</button> <br>
+        </div>
+        <div id="editzone"> <br> <br> <br><br><br>
+            <h1>Player Informations</h1>
+            <h2 id="infos1">
+                Payé <input class="input" type="text" name="nom" id="input0" placeholder="Enter le payé..."> <br><br>
+                Nom <br>
+                <input class="input" type="text" name="Name" id="input1" placeholder="Enter name..."> <br><br>
+                Né le <br>
+                <input class="input" type="text" name="Age" id="input2" placeholder="Enter birthdate..."> <br><br>
+                Post <br>
+                <input class="input" type="text" name="post" id="input3" placeholder="Enter the pos...">
+            </h2>
+            <div id="uploadbuttons1">
+                <button class="bn632-hover bn20" type="button" name="Cancel" id="cancel"
+                    onclick=" cancel()">Cancel</button>
+                <button class="bn632-hover bn20" type="button" name="Save" id="save2" onclick="edit()">Save</button>
+            </div>
+        </div>
+        <div id="Addzone">
+            <br><br> <br><br><br><br>
+            <h1>Player Informations</h1>
+            <h2 id="infos2">
+                Payé <input class="input" type="text" name="upload" id="upload" placeholder="Entrer le payé...">
+                <br><br>
+                Nom <br>
+                <input class="input" type="text" name="nom" id="name" placeholder="Enter name..."> <br><br>
+                Né le <br>
+                <input class="input" type="text" name="Age" id="date" placeholder="Enter birthdate..."> <br><br>
+                Post <br>
+                <input class="input" type="text" name="post" id="pos" placeholder="Enter the pos..."> <br>
+                <div id="uploadbuttons">
+                    <button class="bn632-hover bn20" type="button" name="Cancel" id="cancel"
+                        onclick=" cancel()">Cancel</button>
+                    <button class="bn632-hover bn20" type="button" name="Save" id="save" onclick="add()">Save</button>
+                </div>
+            </h2>
+        </div>
+    </div>
+
+    <div>
+        <div id="actualite">
+            <ul id="newsliste_li" class="news_liste">
+                <li>
+                    <h1 id="actualite_header" class="actualite_header"> Actualite </h1>
+                </li>
+                <li class="li_news_liste_maroc1">
+                    <article>
+                        <img id="actualite" src="./assets/img/test.png" width="400" height="200">
+                        <h3 class="li_header_news_liste"> <a id="actualite_title_preview"
+                                href="News_Projet_Actualite1_Maroc.htm" target="_self"> Maroc vs Croatie Match nul !
+                            </a> </h3>
+                        <p>Le 23 novembre 2022, le Maroc et la Croatie...</p>
+                    </article>
+                </li>
+                <li class="li_news_liste_maroc2">
+                    <article>
+                        <img id="actualite" src="./assets/img/test.png" width="400" height="200">
+                        <h3 class="li_header_news_liste"> <a id="actualite_title_preview"
+                                href="News_Projet_Actualite2_Maroc.htm" target="_self"> Le Maroc Se Prepare WC</a></h3>
+                        <p> Dans le but de se préparer à la coupe du monde, le Maroc met les bouchées doubles...</p>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="navbar-header">
+                <a class="logo" href="#">Frrk.io</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+            var sc = $(window).scrollTop()
+            if (sc > 150) {
+                $("#main-navbar").addClass("navbar-scroll")
+            } else {
+                $("#main-navbar").removeClass("navbar-scroll")
+            }
+        });
+    </script>
+    <script src="./assets/js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+
+
+</body>
+
+</html>
