@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="stylesheet" href="index.css">
 
     <title>Cup Du Monde Qatar 2022</title>
 </head>
@@ -24,21 +23,48 @@
             <div class="container navbar-container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-                    <a href="#">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="./index.html">
                         <img class="logo" src="./assets/img/World-Cup-logo-dark.png" alt="logo">
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#about">Groupes</a></li>
-                        <li><a href="#portfolio">Matchs</a></li>
-                        <li><a href="#contact">Classement</a></li>
+                        <li><a href="header" onclick="goto(this, event)">Accueil</a></li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="#">Groupes <i class="icon icon--arrow-down"></i></a>
+                            <div class="dropdown-content">
+
+                                <button value="A" onclick="gotoGroup(this)">Group A</button>
+                                <button value="B" onclick="gotoGroup(this)">Group B</button>
+                                <button value="C" onclick="gotoGroup(this)">Group C</button>
+                                <button value="D" onclick="gotoGroup(this)">Group D</button>
+                                <button value="E" onclick="gotoGroup(this)">Group E</button>
+                                <button value="F" onclick="gotoGroup(this)">Group F</button>
+                                <button value="G" onclick="gotoGroup(this)">Group G</button>
+                                <button value="H" onclick="gotoGroup(this)">Group H</button>
+                            </div>
+                        </li>
+                        <li><a href="#matches" onclick="gotoMatches(event)">Matches</a></li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="#">Classement <i class="icon icon--arrow-down"></i></a>
+                            <div class="dropdown-content">
+
+                                <button value="A" onclick="selectedGroupRanking(this)">Group A</button>
+                                <button value="B" onclick="selectedGroupRanking(this)">Group B</button>
+                                <button value="C" onclick="selectedGroupRanking(this)">Group C</button>
+                                <button value="D" onclick="selectedGroupRanking(this)">Group D</button>
+                                <button value="E" onclick="selectedGroupRanking(this)">Group E</button>
+                                <button value="F" onclick="selectedGroupRanking(this)">Group F</button>
+                                <button value="G" onclick="selectedGroupRanking(this)">Group G</button>
+                                <button value="H" onclick="selectedGroupRanking(this)">Group H</button>
+                            </div>
+                        </li>
+                        <li><a href="#actualite" onclick="goto(this, event)">Actualités</a></li>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +79,7 @@
                                 <i class="icon icon--facebook"></i>
                             </a>
                         </li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./about.html">About</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,15 +90,65 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <div class="slider-img-4"></div>
+                </div>
+                <div class="swiper-slide">
                     <div class="slider-img-1">
+                    </div>
+                    <div class="news">
+                        <p class="title">Live from Qatar!</p>
+                        <h2 class="main-title">
+                            <span>
+                                <span title=""
+                                    style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                                    <a style="color: #fff;" href="./morocco-news.html" target="_blank">                                   
+                                        Belgium vs Morocco 0-2: World Cup 2022 – as it happened</a>
+                                </span>
+
+                            </span>
+                        </h2>
+                        <div>
+                            <p>FIFA World Cup Daily News</p>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="slider-img-2">
                     </div>
+                    <div class="news">
+                        <p class="title" style="color: rgb(255, 255, 255);">Live from Qatar!</p>
+                        <h2 class="main-title" style="color: rgb(255, 255, 255);">
+                            <span class="d-md-none">
+                                <span title=""
+                                    style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                                   <a href="News_Projet_Actualite1_Maroc.htm" target="_self" style="color: #fff;">                                   
+                                    Tunisia v France and Australia v Denmark - live!</a>
+                                   
+                                </span>
+                            </span>
+                        </h2>
+                        <div>
+                            <p>FIFA World Cup Daily Blog</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="slider-img-3">
+                    </div>
+                    <div class="news">
+                        <p class="title" style="color: rgb(255, 255, 255);">Live from Qatar!</p>
+                        <h2 class="main-title" style="color: rgb(255, 255, 255);">
+                            <span class="d-md-none">
+                                <span
+                                    style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                                    <a href="News_Projet_Actualite1_Maroc.htm" target="_self" style="color: #fff;">                                   
+                                        Morocco v Canada and Australia v Denmark - live!</a>   
+                                                                 </span>
+                            </span>
+                        </h2>
+                        <div class="">
+                            <p class="" style="color: rgb(255, 255, 255);">FIFA World Cup Daily Blog</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,15 +157,515 @@
     </section>
     <div class="swiper-pagination"></div>
 
-   <h1>content</h1>
 
-    <footer>
-        <div class="container footer-container">
-            <div class="navbar-header">
-                <a class="logo" href="#">Frrk.io</a>
+    <div class="content">
+        <div class="groupe-header">
+            <button value="A" onclick="selectedGroup(this)">Group A</button>
+            <button value="B" onclick="selectedGroup(this)">Group B</button>
+            <button value="C" onclick="selectedGroup(this)">Group C</button>
+            <button value="D" onclick="selectedGroup(this)">Group D</button>
+            <button value="E" onclick="selectedGroup(this)">Group E</button>
+            <button value="F" onclick="selectedGroup(this)">Group F</button>
+            <button value="G" onclick="selectedGroup(this)">Group G</button>
+            <button value="H" onclick="selectedGroup(this)">Group H</button>
+        </div>
+        <div class="center">
+            <div id="volet-2" class="selected-group">
+                <button type="button" class="collapsible">
+            Les Groupes <i class="fa-solid fa-plus"></i>
+          </button>
+                <ul id="vol-2" class="collapsible-content hide">
+                    <li class="group-name" id="group-selected"></li>
+                    <li class="group-team">
+                        <img class="flag-team-list" src="" id="flag-team-1" alt="" />
+                        <input type="button" id="team-1" value="" class="btn" onclick="selectedTeam(this)" />
+                    </li>
+                    <li class="group-team">
+                        <img class="flag-team-list" src="" id="flag-team-2" alt="" />
+                        <input type="button" id="team-2" value="" class="btn" onclick="selectedTeam(this)" />
+                    </li>
+                    <li class="group-team">
+                        <img class="flag-team-list" src="" id="flag-team-3" alt="" />
+                        <input type="button" id="team-3" value="" class="btn" onclick="selectedTeam(this)" />
+                    </li>
+                    <li class="group-team">
+                        <img class="flag-team-list" src="" id="flag-team-4" alt="" />
+                        <input type="button" id="team-4" value="" class="btn" onclick="selectedTeam(this)" />
+                    </li>
+                </ul>
+            </div>
+            <div style="width:946px">
+                <div class="vol-3" id="vol-3">
+                    <button type="button" class="collapsible">
+            Les Équipe <i class="fa-solid fa-plus"></i>
+          </button>
+                    <div class="collapsible-content">
+                        <h4>fichier des joueurs :</h4>
+                        <div id="team-info" class="selected-team hide">
+                            <div class="team-name" id="team-name"></div>
+                            <div class="players-bloc">
+                                <div class="player-bloc" id="player-bloc-1" onclick="selectedPlayer('1')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-2" onclick="selectedPlayer( '2')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-3" onclick="selectedPlayer( '3')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-4" onclick="selectedPlayer( '4')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-5" onclick="selectedPlayer( '5')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-6" onclick="selectedPlayer( '6')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-7" onclick="selectedPlayer( '7')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-8" onclick="selectedPlayer( '8')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-9" onclick="selectedPlayer( '9')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-10" onclick="selectedPlayer( '10')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                                <div class="player-bloc" id="player-bloc-11" onclick="selectedPlayer( '11')">
+                                    <img src="" alt="" class="player-img" id="player-img" />
+                                    <div class="player-name" id="player-name"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="volet-4" class="volet-4">
+                    <img src="" class="hide" alt="" id="player-info" />
+                    <div id="volet4" class="volet4 hide">
+                        <table class="table1">
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Payé</th>
+                                    <th>Né le</th>
+                                    <th>Post</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="mytable">
+                                <tr id="Row1">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+
+                                    <td>
+                                        <div class="pos"></div>
+                                    </td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" id="DELETE" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row2">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+
+                                    <td>
+                                        <div class="pos"></div>
+                                    </td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" id="DELETE" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row3">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+
+                                    <td>
+                                        <div class="pos"></div>
+                                    </td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row4">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row5">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row6">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row7">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row8">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row9">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row10">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="Row11">
+                                    <td class="name"></td>
+                                    <td class="pay"></td>
+                                    <td class="date"></td>
+                                    <td class="pos"></td>
+                                    <td>
+                                        <div class="button-center">
+                                            <button class="bn632-hover bn20" type="button" id="EDIT" type="button" onclick="Editer(this)">
+                      Edit
+                    </button>
+                                            <button class="bn632-hover bn20" type="button" onclick="deleteRow(this)">
+                      delete
+                    </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button class="bn632-hover bn20 Addbutton" type="button" id="Addbutton" onclick="Ajouter()">
+                    Ajouter
+                  </button>
+                        <div id="editzone" class="editzone hide">
+                            <h1>Informatins des joueurs</h1>
+                            <div id="infos1" class="infos1">
+                                <div class="forminput">
+                                    Nom
+                                    <input class="input" type="text" name="Name" id="input0" placeholder="Enter name..." />
+                                </div>
+                                <div class="forminput">
+                                    Payé
+                                    <input class="input" type="text" name="nom" id="input1" placeholder="Enter le payé..." />
+                                </div>
+                                <div class="forminput">
+                                    Né le
+                                    <input class="input" type="text" name="Age" id="input2" placeholder="Enter birthdate..." />
+                                </div>
+                                <div class="forminput">
+                                    Post
+                                    <input class="input" type="text" name="post" id="input3" placeholder="Enter the pos..." />
+                                </div>
+                                <div class="forminput">
+                                    <input class="input" type="hidden" name="post" id="input4" placeholder="" />
+                                </div>
+                            </div>
+                            <div id="uploadbuttons1">
+                                <button class="bn632-hover bn20" type="button" name="Cancel" id="cancel" onclick="cancel()">
+              Annuler
+            </button>
+                                <button class="bn632-hover bn20" type="button" name="Save" id="save2" onclick="edit()">
+              Enregistrer
+            </button>
+                            </div>
+                        </div>
+                        <div id="Addzone" class="Addzone hide">
+                            <h1>Informatins des joueurs</h1>
+                            <div id="infos2" class="info2">
+                                <div class="forminput">
+                                    Payé
+                                    <input class="input" type="text" name="upload" id="upload" placeholder="Entrer le payé..." />
+                                </div>
+                                <div class="forminput">
+                                    Nom
+                                    <input class="input" type="text" name="nom" id="name" placeholder="Enter name..." />
+                                </div>
+                                <div class="forminput">
+                                    Né le
+                                    <input class="input" type="text" name="Age" id="date" placeholder="Enter birthdate..." />
+                                </div>
+                                <div class="forminput">
+                                    Post
+                                    <input class="input" type="text" name="post" id="pos" placeholder="Enter the pos..." />
+                                </div>
+
+                                <div id="uploadbuttons">
+                                    <button class="bn632-hover bn20" type="button" name="Cancel" id="cancel" onclick="cancel()">
+                Annuler
+              </button>
+                                    <button class="bn632-hover bn20" type="button" name="Save" id="save" onclick="add()">
+                Enregistrer
+              </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="matches" class="matches hide">
+                        <h3>Calendrier des matchs</h3>
+                        <img id="matches-img" alt="Calendrier-des-matchs" src="./assets/img/match_schedule.png" />
+                    </div>
+
+                    <div id="classement" class="hide classement">
+                        <h3 id="groupe-classement"></h3>
+                        <div class="classement-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Équipe
+                                        </th>
+                                        <th>
+                                            MJ
+                                        </th>
+                                        <th>
+                                            G
+                                        </th>
+                                        <th>
+                                            N
+                                        </th>
+                                        <th>
+                                            P
+                                        </th>
+                                        <th>
+                                            Pts
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="classement-body" class="classement-body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="actualite" class="volet-5">
+                <button type="button" class="collapsible">
+          Actualité <i class="fa-solid fa-plus"></i>
+        </button>
+                <ul id="newsliste_li" class="news_liste">
+                    <li>
+                        <h1 id="actualite_header" class="actualite_header"> Actualite </h1>
+                    </li>
+                    <li class="li_news_liste_maroc1">
+                        <article>
+                            <img id="actualit" src="./assets/img/test.png" width="400" height="200">
+                            <h3 class="li_header_news_liste"> <a id="actualite_title_preview" href="News_Projet_Actualite1_Maroc.htm" target="_self"> Maroc vs Croatie Match nul !
+                              </a> </h3>
+                            <p>Le 23 novembre 2022, le Maroc et la Croatie...</p>
+                        </article>
+                    </li>
+                    <li class="li_news_liste_maroc2">
+                        <article>
+                            <img id="actualit" src="./assets/img/prep-maroc.jpeg" width="400" height="200">
+                            <h3 class="li_header_news_liste"> <a id="actualite_title_preview" href="News_Projet_Actualite2_Maroc.htm" target="_self"> Le Maroc Se Prepare WC</a></h3>
+                            <p> Dans le but de se préparer à la coupe du monde, le Maroc met les bouchées doubles...</p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+    </div>
+
+    </div>
+
+
+
+    <footer class="foot-col">
+        <div class="foot-main">
+            <div class="foot-rows">
+                <div class="foot-row">
+                    <h4>Cup du monde Qatar</h4>
+                    <p style="text-align: justif; max-width: 300px;">Alors que le Qatar accueille la première Coupe du Monde de la FIFA™ jamais organisée dans le monde arabe, une scène unique et extraordinaire a été créée pour les équipes, les joueurs et, bien sûr, vous les fans. Découvrez ici les éléments
+                        individuels de votre Coupe du Monde de la FIFA™, que nous espérons que vous apprécierez pendant votre séjour au Qatar.
+                    </p>
+                </div>
+                <div class="foot-row">
+                    <h4>Contacts</h4>
+                    <ul>
+                        <li>
+                            Email : fans@qatar2022.q
+                        </li>
+                        <li>
+                            Tèl: Sans frais dans Qatar 2022
+                        </li>
+                        <li>
+                            Tèl: À partir de l'étranger +974 4441 2022
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot-row">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="terms.html">TERMS & CONDITIONS </a></li>
+                        <li><a href="policy.html">PRIVACY POLICY</a></li>
+                        <li><a href="#volet-4" onclick="goto(this, event)">Matches</a></li>
+                        <li><a href="#volet-4" onclick="goto(this, event)">Classement</a></li>
+                        <li><a href="#actualite" onclick="goto(this, event)">Actualités</a></li>
+                    </ul>
+                </div>
+                <div class="foot-row">
+                    <div class="social-icon">
+                        <h4>Suivez-nous sur</h4>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/fifa"><i class="icon icon--facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/FIFAcom"><i class="icon icon--twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span class="copy">Copyright © 2022 Qatar World Cup. All rights reserved.</span>
+                <div class="terms">
+                    <span><a href="./terms.html">Conditions d'utilisation</a></span>
+                    <span><a href="./policy.html">Politique de Confidentialité</a></span>
+                </div>
             </div>
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
         $(window).scroll(function() {
@@ -107,5 +683,9 @@
 
 
 </body>
+
+</html>
+
+</html>
 
 </html>
