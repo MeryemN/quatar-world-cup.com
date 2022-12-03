@@ -1,89 +1,84 @@
 /* About us */
 
 .about {
-    margin-top: 15rem;
-    color: black;
+  margin-top: 15rem;
+  color: black;
 }
-
 
 /* Three columns side by side */
 
 .team {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .column {
-    float: left;
-    width: 100%;
-    margin-bottom: 16px;
-    padding: 0 8px;
+  float: left;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 0 8px;
 }
-
 
 /* Display the columns below each other instead of side by side on small screens */
 
 @media (max-width: 768px) {
-    .team {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-    }
+  .team {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 425px) {
-    .team {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 1rem;
-    }
+  .team {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+  }
 }
-
 
 /* Add some shadows to create a card effect */
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
 
 /* Some left and right padding inside the container */
 
 .card-container {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 h2 {
-    text-align: start;
+  text-align: start;
 }
-
 
 /* Clear floats */
 
 .card-container::after,
 .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .title {
-    color: grey;
+  color: grey;
 }
 
 .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #551265;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #551265;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
 }
 
 .button:hover {
-    background-color: #551265D0;
+  background-color: #551265d0;
 }
