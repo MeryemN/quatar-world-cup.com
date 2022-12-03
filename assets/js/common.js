@@ -342,12 +342,11 @@ function deleteRow(t) {
 
 /********************************************************************** */
 
-var volet = document.getElementById("volet4");
+var volet = document.getElementById("volet-4");
 var ajouterzone = document.getElementById("Addzone");
 var editerzone = document.getElementById("editzone");
 
 function cancel() {
-  volet.classList.remove("hide");
   ajouterzone.classList.add("hide");
   editerzone.classList.add("hide");
 }
@@ -355,14 +354,12 @@ function cancel() {
 function Ajouter() {
   ajouterzone.classList.remove("hide");
   editerzone.classList.add("hide");
-  volet.classList.add("hide");
 }
 
 /******************************************************************* */
 function Editer(t) {
   ajouterzone.classList.add("hide");
   editerzone.classList.remove("hide");
-  volet.classList.add("hide");
 
   var r = t.parentNode.parentNode.parentNode;
 
